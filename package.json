@@ -5,7 +5,9 @@
   "main": "dist/node/prod/lib/index.js",
   "browser": "dist/browser/lib/app/index.js",
   "scripts": {
-    "test": "gulp test"
+    "test": "gulp test",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "repository": {
     "type": "git",
@@ -97,10 +99,12 @@
     "bluebird": "^3.1.1",
     "lodash": "^4.0.0",
     "react-traverse": "0.0.3",
-    "seedrandom": "^2.4.2"
+    "seedrandom": "^2.4.2",
+    "snyk": "^1.189.0"
   },
   "peerDependencies": {
     "react": "^0.14.7",
     "react-dom": "^0.14.7"
-  }
+  },
+  "snyk": true
 }
